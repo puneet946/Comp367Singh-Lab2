@@ -2,7 +2,7 @@ pipeline {
     agent any
       environment {
         DOCKER_HUB_PWD = credentials('DockerhubID')
-        DOCKER_IMAGE_NAME = 'psing946@my.centennialcollege.ca/mavenapp'
+        DOCKER_IMAGE_NAME = 'psing946/mavenapp'
     }
 
     tools {
@@ -43,7 +43,7 @@ pipeline {
         stage('Docker Login') {
             steps {
                 script {
-                    sh "docker login -u psing946@my.centennialcollege.ca -p ${DOCKER_HUB_PWD}"
+                    sh "docker login -u psing946 -p ${DOCKER_HUB_PWD}"
                 }
             }
         }
