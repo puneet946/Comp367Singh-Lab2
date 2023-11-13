@@ -1,7 +1,7 @@
 pipeline {
     agent any
       environment {
-        DOCKER_HUB_PWD = credentials('DockerhubID')
+        DOCKER_HUB_PWD = credentials('dockerhubid')
         DOCKER_IMAGE_NAME = 'psing946/mavenapp'
     }
 
