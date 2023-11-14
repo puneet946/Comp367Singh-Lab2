@@ -43,7 +43,7 @@ pipeline {
         stage('Docker Login') {
             steps {
                 script {
-                    sh "docker login -u psing946 -p ${DOCKER_HUB_PWD}"
+                    bat "docker login -u psing946 -p ${DOCKER_HUB_PWD}"
                 }
             }
         }
@@ -51,7 +51,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    sh "docker push ${DOCKER_IMAGE_NAME}"
+                    bat "docker push ${DOCKER_IMAGE_NAME}"
                 }
             }
         }
