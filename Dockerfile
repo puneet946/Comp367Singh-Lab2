@@ -17,7 +17,7 @@ RUN mvn clean package
 FROM tomcat:9.0-jdk11-openjdk-slim
 
 # Copy the WAR file from the build stage to the Tomcat webapps directory
-COPY --from=build /workspace/Mavenapp/target/Mavenapp.war /usr/local/tomcat/webapps/
+COPY --from=build C:\ProgramData\Jenkins\.jenkins\workspace\Mavenapp\target\Mavenapp.war /usr/local/tomcat/webapps/
 
 # Expose the default Tomcat port
 EXPOSE 8080
